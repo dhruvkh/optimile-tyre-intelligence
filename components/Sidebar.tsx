@@ -1,5 +1,6 @@
 
 import React from 'react';
+import Logo from "../customer_logo.jpeg"
 
 interface SidebarProps {
   currentView: string;
@@ -19,12 +20,11 @@ export const Sidebar: React.FC<SidebarProps> = ({ currentView, setView }) => {
 
   return (
     <aside className="w-64 bg-slate-900 text-slate-300 flex flex-col border-r border-slate-800">
-      <div className="p-6">
-        <div className="flex items-center gap-3">
-          <div className="w-8 h-8 bg-indigo-600 rounded flex items-center justify-center font-bold text-white">TI</div>
-          <h1 className="text-lg font-bold text-white tracking-tight">Tyre Intelligence</h1>
+      <div className="px-6 pt-4">
+        <div className="flex items-center justify-left">
+          <img src={Logo} alt="Optimile logo" className="object-cover" style={{ width: '80%', height: '100%' }} />
         </div>
-        <p className="text-[10px] uppercase tracking-widest text-slate-500 mt-1">Optimile Tyre Management</p>
+        <p className="text-[10px]  tracking-widest text-slate-500 mt-2 text-left">Powered by Optimile</p>
       </div>
       
       <nav className="flex-1 mt-4">
