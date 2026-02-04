@@ -19,7 +19,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ currentView, setView }) => {
   ];
 
   return (
-    <aside className="w-64 bg-slate-900 text-slate-300 flex flex-col border-r border-slate-800">
+    <aside className="w-64 bg-white-900 text-slate-300 flex flex-col border-r border-white-800">
       <div className="px-6 pt-4">
         <div className="flex items-center justify-left">
           <img src={Logo} alt="Optimile logo" className="object-cover" style={{ width: '80%', height: '100%' }} />
@@ -33,7 +33,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ currentView, setView }) => {
             key={item.id}
             onClick={() => setView(item.id)}
             className={`w-full flex items-center gap-3 px-6 py-3 text-sm font-medium transition-colors hover:bg-slate-800 hover:text-white ${
-              currentView === item.id ? 'bg-slate-800 text-indigo-400 border-r-2 border-indigo-400' : ''
+              currentView === item.id ? 'bg-slate-800 text-white border-r-2 border-white-400' : ' text-black '
             }`}
           >
             <span>{item.icon}</span>
