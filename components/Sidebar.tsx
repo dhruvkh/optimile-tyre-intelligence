@@ -32,8 +32,8 @@ export const Sidebar: React.FC<SidebarProps> = ({ currentView, setView }) => {
           <button
             key={item.id}
             onClick={() => setView(item.id)}
-            className={`w-full flex items-center gap-3 px-6 py-3 text-sm font-medium transition-colors hover:bg-slate-800 hover:text-white ${
-              currentView === item.id ? 'bg-slate-800 text-white border-r-2 border-white-400' : ' text-black '
+            className={`w-full flex items-center gap-3 px-6 py-3 text-sm font-medium transition-colors hover:bg-[#2574f580] hover:text-slate-900 ${
+              currentView === item.id ? 'bg-[#2574f580] text-slate-900 border-r-2 border-slate-300' : 'text-slate-800'
             }`}
           >
             <span>{item.icon}</span>
@@ -43,11 +43,11 @@ export const Sidebar: React.FC<SidebarProps> = ({ currentView, setView }) => {
       </nav>
 
       <div className="p-6 border-t border-slate-800">
-        <div className="bg-slate-800 rounded-lg p-4">
-          <p className="text-xs text-slate-400">System Status</p>
+        <div className="bg-white rounded-lg p-4">
+          <p className="text-xs text-black">System Status</p>
           <div className="flex items-center gap-2 mt-1">
             <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-            <span className="text-xs text-white">Operational</span>
+            <span className="text-xs text-black">Operational</span>
           </div>
         </div>
       </div>
